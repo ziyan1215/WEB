@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>demo</title>
+	<style type="text/css">
+		#loading{
+			width: 200px;
+			height: auto;
+			margin: 0,auto;
+			margin-top: 25%;
+			position: relative;
+			font-size: 25px;
+			font-family: 'Arial';
+		}
+		#loading:after{
+			content: "loading";
+			/*语法：animation: name（需要绑定的选择器） 
+							duration（规定完成动画所花费的时间，以秒或毫秒计。） 
+							timing-function（规定动画的速度曲线。） 
+							delay 	（规定在动画开始之前的延迟）
+							iteration-count  （规定动画应该播放的次数）
+							direction （规定是否应该轮流反向播放动画。）;*/
+			animation:load 3s linear infnite; 
+		}
+		@keyframes load{
+			0%{
+				content: "loading";
+			}
+			25%{
+				content: "loading.";
+			}
+			50%{
+				content: "loading..";
+			}
+			75%{
+				content: "loading...";
+			}
+			
+			
+		}
+	</style>
+</head>
+<body>
+	<div id="loading"></div>
+</body>
+</html>
